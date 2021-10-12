@@ -42,11 +42,16 @@ Sample Failed Entry:
 ------------------------
   
 2021/10/12 03:50:25 Failed to get response from url:  http://sample_domain_endpoint.com/data?title=Puppy&image=https://blog.golang.org/puppy/puppy.png&foo=null  using method:  GET
+   
+Sample Postback Response
+---------------------------
+GET
+http http://sample_domain_endpoint.com/data?title=Puppy&image=https://blog.golang.org/puppy/puppy.png&foo=null
   
 
 Troubleshooting:
 ------------------------
-Error log location: /var/log/delivery-agent.log
+Response/error log location: /var/log/delivery-agent-output.log
 Event log location: /var/log/delivery-agent.txt
 
 If you don't see you request response in the event log, check for errors in the error log. 
