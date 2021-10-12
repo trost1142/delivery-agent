@@ -66,6 +66,10 @@ func consume(ctx context.Context) {
 		// Add data values from Kafka message into request URL
 		filled_url := process_url(message.Data, message.Url)
 		
+		//Print postback response to /var/log/delivery-agent-output.log
+                fmt.Println(message.Method)
+                fmt.Println(filled_url)
+		
 		// Get delivery time in UTC
 		loc, _ := time.LoadLocation("UTC")	
 		currentTime := time.Now().In(loc)
